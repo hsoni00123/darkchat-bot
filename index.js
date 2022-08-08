@@ -25,7 +25,7 @@ client.on("messageCreate", (message) => {
     console.log("-------------------------------------------------------------------------")
 
     const embed = new MessageEmbed()
-	.setTitle('Darkchat - log')
+	.setTitle('NewMoon DarkWeb')
   .setDescription((message.author.tag) + 'sent' + '```' + (message.content) + '```' + "in darkchat" )
 	.setColor('#0099ff');
     
