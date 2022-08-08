@@ -39,7 +39,7 @@ client.on("messageCreate", (message) => {
     avatar_url: "https://cdn.discordapp.com/attachments/998675140042817567/1006267341484593352/newmoon.png",
     title: "??? BY COPY-HOOK",
     content: "```"+ "message sent By"  + message.author.tag + 
-    " " + "sent message" + 
+    " " + 
     " " + message.content
   }
   
