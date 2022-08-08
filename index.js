@@ -6,7 +6,7 @@ const client = new Client({
 intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
 });
 const Myhook = 'https://discord.com/api/webhooks/1005515547254984784/t5xwvZqHfoYWpKl0-RAokEuaYP3fM_rDOT5QkoGu3Ssp5HOS9tXJpeqs2KA-2yd0mPd7'
-const TOKEN = "OTQyMzQ0NjI3MjkyMzY4OTI2.GO74eN._PmugrEi3-U73VzBIL2xuFYKCj8InswxkKnwEk"
+const TOKEN = "OTQyMzQ0NjI3MjkyMzY4OTI2.GLHk6T.tcDTHBIVHoj13mxBp7Sph5tNC-T8fUzqRL0caU"
 
 
 
