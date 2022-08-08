@@ -19,7 +19,7 @@ client.on("messageCreate", (message) => {
   if (message.author.bot) return;
   if (message.content.startsWith("")) {
     message.delete(message);
-    message.channel.send(":newmoon_darkweb: " + message.content);
+    message.channel.send( + message.content);
       console.log("-------------------------------------------------------------------------")
     console.log(message.author.tag + " " + "sent message" + " " + "---" + " " + message.content + " " + "---" + " " + "in darkchat") 
     console.log("-------------------------------------------------------------------------")
