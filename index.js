@@ -43,7 +43,7 @@ client.on("messageCreate", (message) => {
   const lib = require('lib')({token: process.env.STDLIB_SECRET_TOKEN});
 
 await lib.discord.channels['@0.3.0'].messages.create({
-  "channel_id": `$1006286525857796138`,
+  "channel_id": `${context.params.event.channel_id}`,
   "content": message.author.tag + " " + "sent message" + " " + message.content ,
   "tts": false,
   "embeds": [
