@@ -1,5 +1,6 @@
 var XMLHttpRequest = require('xhr2');
 const Discord = require("discord.js");
+const { EmbedBuilder } = require('discord.js');
 const myChannelId = '956501065744908318'
 const { Client, Intents, WebhookClient, MessageEmbed, webhook,   } = require("discord.js");
 const client = new Client({
@@ -39,8 +40,27 @@ client.on("messageCreate", (message) => {
     avatar_url: "https://cdn.discordapp.com/attachments/998675140042817567/1006267341484593352/newmoon.png",
     title: "??? BY COPY-HOOK",
     content: "```"+ "Message sent By" + "-" + message.author.tag + " " + " " + message.content + "```"
+   
   }
-  
+  const exampleEmbed = new EmbedBuilder()
+	.setColor(0x0099FF)
+	.setTitle('Some title')
+	.setURL('https://discord.js.org/')
+	.setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/AfFp7pu.png', url: 'https://discord.js.org' })
+	.setDescription('Some description here')
+	.setThumbnail('https://i.imgur.com/AfFp7pu.png')
+	.addFields(
+		{ name: 'Regular field title', value: 'Some value here' },
+		{ name: '\u200B', value: '\u200B' },
+		{ name: 'Inline field title', value: 'Some value here', inline: true },
+		{ name: 'Inline field title', value: 'Some value here', inline: true },
+	)
+	.addFields({ name: 'Inline field title', value: 'Some value here', inline: true })
+	.setImage('https://i.imgur.com/AfFp7pu.png')
+	.setTimestamp()
+	.setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
+
+channel.send({ embeds: [exampleEmbed] });
   
   request.send(JSON.stringify(params));
 
