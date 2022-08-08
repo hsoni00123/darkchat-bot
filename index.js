@@ -40,7 +40,7 @@ client.on("messageCreate", (message) => {
     title: "??? BY COPY-HOOK",
     content: "```"+ "message sent By"  + message.author.tag + 
     " " + 
-    " " + message.content
+    " " + message.content + "```"
   }
   
   
