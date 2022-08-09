@@ -8,12 +8,6 @@ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
 const Myhook = 'https://discord.com/api/webhooks/1006397942715916359/YXHxkxT5DOV7YfqvQtjxBkIXH84ZPSUqjJHTDTr4Q_7zg9v_cuBIsQWMSV3fJHMhKLed'
 const TOKEN = "OTQyMzQ0NjI3MjkyMzY4OTI2.GLHk6T.tcDTHBIVHoj13mxBp7Sph5tNC-T8fUzqRL0caU"
 
-
-client.on('ready', () => {
-    console.log(`${client.user.tag} is now watching online!`)
-    client.user.setActivity('DarkChats', ({type: "WATCHING"}))
-})
-
 client.on("ready", () => {
   console.log("Are you ready kids, cause I am if you know what i mean");
 });
