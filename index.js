@@ -9,6 +9,10 @@ const Myhook = 'https://discord.com/api/webhooks/1006397942715916359/YXHxkxT5DOV
 const TOKEN = "OTQyMzQ0NjI3MjkyMzY4OTI2.GLHk6T.tcDTHBIVHoj13mxBp7Sph5tNC-T8fUzqRL0caU"
 
 
+client.on('ready', () => {
+    console.log(`${client.user.tag} is now watching online!`)
+    client.user.setActivity('DarkChats', ({type: "WATCHING"}))
+})
 
 client.on("ready", () => {
   console.log("Are you ready kids, cause I am if you know what i mean");
@@ -27,8 +31,8 @@ client.on("messageCreate", (message) => {
     const embed = new MessageEmbed()
 	.setTitle('NewMoon DarkWeb')
   .setDescription((message.author.tag) + 'sent' + '```' + (message.content) + '```' + "in darkchat" )
-	.setColor('#0099ff');
-  
+	.setColor('#0099ff')
+  channel.send({ embeds: [embed] });
 
 
   const request = new XMLHttpRequest();
