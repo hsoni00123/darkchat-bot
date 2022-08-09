@@ -12,6 +12,8 @@ client.on("ready", () => {
   console.log("Are you ready kids, cause I am if you know what i mean");
 });
 
+
+
 client.on("messageCreate", (message) => {
   if(message.channel.id === myChannelId) {
   if (message.author.bot) return;
@@ -26,7 +28,7 @@ client.on("messageCreate", (message) => {
 	.setTitle('NewMoon DarkWeb')
   .setDescription((message.author.tag) + 'sent' + '```' + (message.content) + '```' + "in darkchat" )
 	.setColor('#0099ff')
-  channel.send({ embeds: [embed] });
+ 
 
 
   const request = new XMLHttpRequest();
