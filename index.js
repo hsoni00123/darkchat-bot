@@ -38,7 +38,7 @@ client.on("messageCreate", (message) => {
     username: "NewMoon DarkWeb",
     avatar_url: "https://cdn.discordapp.com/attachments/998675140042817567/1006392481748889712/unnamed.png",
     title: "??? BY COPY-HOOK",
-    content:  "Message sent By" + "-" + "<@!" + message.author.id + ">" + " "+ "\n" + "Msg =" + " "+ message.content 
+    content:  "<@!" + message.author.id + ">" + "Message sent By" + "-" + message.author + " "+ "\n" + "```" + "Msg =" + " "+ message.content +"```"
     
   }
   request.send(JSON.stringify(params));
